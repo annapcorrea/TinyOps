@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import { Tiny } from "@/components/tiny";
+import { TinyMoodLabel } from "@/components/mood-dial";
 
 export function Shell({ children }: { children: ReactNode }) {
   return (
@@ -14,10 +16,10 @@ export function Shell({ children }: { children: ReactNode }) {
         </div>
         <div
           aria-label="Slot for Tiny"
-          className="w-24 shrink-0 rotate-6 border-4 border-ink bg-cream px-2 py-2 text-center text-ink shadow-[6px_6px_0_#d6ff4a] sm:w-32 sm:px-3 sm:py-3"
+          className="w-auto shrink-0 rotate-6 border-4 border-ink bg-cream px-2 py-2 text-center text-ink shadow-[6px_6px_0_#d6ff4a] sm:px-3 sm:py-3"
         >
-          <div className="mx-auto mb-2 h-12 w-12 rounded-full border-4 border-dashed border-ink bg-[#e9d5ff] sm:h-16 sm:w-16" />
-          <p className="font-display text-[11px] leading-tight sm:text-sm">tiny sits here</p>
+          <Tiny pixel={8} />
+          <TinyMoodLabel />
         </div>
       </header>
       <main className="flex flex-1 items-start py-10 sm:py-16">{children}</main>

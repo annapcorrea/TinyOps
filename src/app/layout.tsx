@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka, Lilita_One } from "next/font/google";
 import { Shell } from "@/components/shell";
+import { TinyMoodProvider } from "@/components/tiny-mood";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fredoka.variable} ${lilita.variable}`}>
-        <Shell>{children}</Shell>
+        <TinyMoodProvider>
+          <Shell>{children}</Shell>
+        </TinyMoodProvider>
       </body>
     </html>
   );

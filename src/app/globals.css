@@ -22,3 +22,23 @@ body {
   background-image: radial-gradient(#2e1065 16%, transparent 17%);
   background-size: 22px 22px;
 }
+
+@keyframes tiny-hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-8px);
+  }
+}
+
+.tiny-hop {
+  animation: tiny-hop 0.55s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tiny-hop {
+    animation: none;
+  }
+}
