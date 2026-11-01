@@ -2,7 +2,7 @@
 
 TinyOps is a small task manager. Tasks stay in memory on the server and will be exposed through tRPC. The interface is a dark, purple layout with a pixel mascot named Tiny.
 
-This repository currently contains the Next.js scaffold only. Task screens, tRPC, and Tiny come in later steps.
+The app currently shows a dark purple shell and an empty home line. Task screens, tRPC, and Tiny come in later steps.
 
 ## Run locally
 
